@@ -2017,39 +2017,33 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent_New::
 # 1011 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	closemessage
 # 1012 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	message AskForFavoriteType
-# 1013 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	scrollingmultichoice sScrollingSets, 25, 5, 5, 1
-# 1014 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	closemessage
-# 1015 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	givemon SPECIES_GASTLY, 5, ITEM_NONE
-# 1016 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1013 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 1017 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1014 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	waitfanfare
-# 1018 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1015 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	bufferleadmonspeciesname STR_VAR_1
-# 1019 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1016 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
-# 1020 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1017 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent_New_2
-# 1023 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1020 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent_New_1:
-# 1025 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1022 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent_New_2:
-# 1021 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1018 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent_New_1
 
 
 ThankYouText::
-# 1028 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
+# 1025 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	.string "PROF. BIRCH: So, {PLAYER}{KUN}.\p"
 	.string "I've heard so much about you from\n"
 	.string "your father.\p"
@@ -2060,11 +2054,12 @@ ThankYouText::
 	.string "I guess you have your father's blood\n"
 	.string "in your veins after all!\p"
 	.string "Oh, yes. As thanks for rescuing me,\n"
-	.string "I'd like to give you a POKéMON.\p"
+	.string "I'd like you to have a POKéMON.\p"
 	.string "Unfortunately that {STR_VAR_1} is\n"
-	.string "my kid's POKéMON and I don't currently\l"
-	.string "have one to give you.\p$"
-
-AskForFavoriteType::
-# 1045 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	.string "Say, what is your favorite POKéMON type?\p$"
+	.string "my kid's POKéMON so I am unable to\l"
+	.string "give you that one.\p"
+	.string "...\n"
+	.string "...\p"
+	.string "!!!\p"
+	.string "I know, I can give you this Gastly\n"
+	.string "as a thank you!\p$"
