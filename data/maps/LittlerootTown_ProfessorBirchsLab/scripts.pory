@@ -1009,6 +1009,12 @@ script LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent_New {
     message(ThankYouText)
     waitmessage
     closemessage
+    do {
+        message(AskForFavoriteType)
+        multichoicegrid(0, 0, MULTI_TYPE_CHOICES, 4, 1)
+        closemessage
+        msgbox("So that is your favorite type?", MSGBOX_YESNO)
+    } while (var(VAR_RESULT) == NO)
     givemon(SPECIES_GASTLY, 5, ITEM_NONE)
     playfanfare(MUS_OBTAIN_ITEM)
     waitfanfare
@@ -1033,13 +1039,13 @@ text ThankYouText {
 	"I guess you have your father's blood\n"
 	"in your veins after all!\p"
 	"Oh, yes. As thanks for rescuing me,\n"
-	"I'd like you to have a POKéMON.\p"
+	"I'd like to give you a POKéMON.\p"
     "Unfortunately that {STR_VAR_1} is\n"
-    "my kid's POKéMON so I am unable to\l"
-    "give you that one.\p"
-    "...\n"
-    "...\p"
-    "!!!\p"
-    "I know, I can give you this Gastly\n"
-    "as a thank you!\p"
+    "my kid's POKéMON and I don't currently\l"
+    "have one to give you.\p"
+}
+
+text AskForFavoriteType {
+    "Say, what is your favorite POKéMON\n"
+    "type?\p"
 }

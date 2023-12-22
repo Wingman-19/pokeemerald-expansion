@@ -3038,4 +3038,26 @@ extern const u8 gText_TellHimTheWords[];
 extern const u8 gText_ExpShareOn[];
 extern const u8 gText_ExpShareOff[];
 
+// Pokemon Types
+extern const u8 gText_Normal_Type[];
+extern const u8 gText_Fighting_Type[];
+extern const u8 gText_Flying_Type[];
+extern const u8 gText_Poison_Type[];
+extern const u8 gText_Ground_Type[];
+extern const u8 gText_Rock_Type[];
+extern const u8 gText_Bug_Type[];
+extern const u8 gText_Ghost_Type[];
+extern const u8 gText_Steel_Type[];
+extern const u8 gText_Fire_Type[];
+extern const u8 gText_Water_Type[];
+extern const u8 gText_Grass_Type[];
+extern const u8 gText_Electric_Type[];
+extern const u8 gText_Psychic_Type[];
+extern const u8 gText_Ice_Type[];
+extern const u8 gText_Dragon_Type[];
+extern const u8 gText_Dark_Type[];
+extern const u8 gText_Fairy_Type[];
+extern const u8 gText_All_Types[];
+extern const u8 gText_No_Types[];
+
 #endif // GUARD_STRINGS_H
